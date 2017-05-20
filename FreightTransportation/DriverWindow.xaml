@@ -1,0 +1,42 @@
+﻿<Window x:Class="FreightTransportation.DriverWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FreightTransportation"
+        mc:Ignorable="d"
+          Title="Driver" Height="446.059" Width="504" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" >
+    <Grid Margin="0,10,-8,-51">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="112*"/>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="113*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="356*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <DataGrid Name="dgDriverOrders" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" Margin="10,77,21,109" Grid.ColumnSpan="3">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="FirstName" Binding="{Binding CustomerUser.FirstName}" />
+                <DataGridTextColumn Header="From" Binding="{Binding SendingCity}" />
+                <DataGridTextColumn Header="Department" Binding="{Binding SendingDepartment}" />
+                <DataGridTextColumn Header="To" Binding="{Binding ReceivingCity}" />
+                <DataGridTextColumn Header="Department" Binding="{Binding ReceivingDepartment}" />
+                <DataGridTextColumn Header="Status" Binding="{Binding Status}" />
+                <DataGridTextColumn Header="Driver" Binding="{Binding DriverUser.FirstName}" />
+                <DataGridTextColumn Header="Price" Binding="{Binding Price}" />
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <Button x:Name="buttonSelect" Content="Select" HorizontalAlignment="Left" Margin="10,0,0,60" Width="75" Click="buttonSelect_Click" Height="20" VerticalAlignment="Bottom"/>
+        <Button x:Name="buttonDelivered" Content="Delivered" Margin="0,0,20,60" RenderTransformOrigin="0.456,0.453" Click="buttonDelivered_Click" Grid.Column="2" HorizontalAlignment="Right" Width="75" Height="20" VerticalAlignment="Bottom"/>
+        <Label x:Name="label" Content="Orders:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label x:Name="labelWelcome" Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Button x:Name="buttonLogOut" Content="LogOut" HorizontalAlignment="Right" Margin="0,13,21,0" VerticalAlignment="Top" Width="74" Click="buttonLogOut_Click" Grid.Column="2"/>
+
+
+    </Grid>
+</Window>
