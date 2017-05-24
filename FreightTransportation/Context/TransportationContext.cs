@@ -9,7 +9,7 @@ namespace FreightTransportation.Context
 {
     public class TransportationContext:DbContext
     {
-        public TransportationContext() : base("FreightTransportationDB")
+        public TransportationContext() : base("name=FreightTransportationDB")
         {
         }
         public DbSet<Order> Orders{ get; set; }
