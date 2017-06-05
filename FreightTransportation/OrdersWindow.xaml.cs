@@ -39,7 +39,7 @@ namespace FreightTransportation
             else
             {
                 var orderIdToDelete = ((Order)dgCustomerOrders.SelectedItem).OrderId;
-               
+               // indentation
                _unitOfWork.OrderRepository.Delete(orderIdToDelete);
                 _unitOfWork.Save();
                

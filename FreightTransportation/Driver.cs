@@ -5,12 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+
+// add a space after usings
 namespace FreightTransportation
 {
    public class Driver
     {
         public int DriverId { get; set; }
-
+        // and remove blank space here
 
         public string FirstName { get; set; }
 

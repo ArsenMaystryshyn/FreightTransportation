@@ -27,10 +27,12 @@ namespace FreightTransportation
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            // use string format or string interpolation
             label1Price.Content = price.ToString()+" hrn";
             confirm = false;
         }
 
+        // naming convention!!!!
         private void buttonCancel_Click(object sender, RoutedEventArgs e)
         {
             this.Close();

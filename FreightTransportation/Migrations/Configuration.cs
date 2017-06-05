@@ -9,7 +9,7 @@ namespace FreightTransportation.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             ContextKey = "FreightTransportation.Context.TransportationContext";
         }
 

@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Security.Cryptography;
 namespace FreightTransportation
 {
+    // create interface and implement it
+    // static classes arent testable
     public static class Encrypt
     {
         public static string GetHash(string text)
