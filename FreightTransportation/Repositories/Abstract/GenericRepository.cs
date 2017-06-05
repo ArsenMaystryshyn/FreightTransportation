@@ -61,6 +61,7 @@ namespace FreightTransportation.Repositories.Abstract
             }
         }
 
+        // why object? if id is int, every time boxing will occur
         public virtual TEntity GetByID(object id)
         {
             return dbSet.Find(id);

@@ -7,6 +7,7 @@ using FreightTransportation.Context;
 using FreightTransportation.Repositories.Abstract;
 namespace FreightTransportation
 {
+    // use interface and implement it (IUnitOfWork)
     public class UnitOfWork : IDisposable
     {
         private TransportationContext context = new TransportationContext();

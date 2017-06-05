@@ -33,6 +33,7 @@ namespace FreightTransportation
         }
         private void SetComboBoxes()
         {
+            // should be got from database
             comboBoxSendingCity.Items.Add("Lviv");
             comboBoxSendingCity.Items.Add("Kyiv");
             comboBoxSendingCity.Items.Add("Dnipro");
@@ -53,6 +54,7 @@ namespace FreightTransportation
 
         private void buttonCalculatePrice_Click(object sender, RoutedEventArgs e)
         {
+            // extract some logic to separate methods
             _price = 0;
             if(comboBoxSendingCity.SelectedItem != null && comboBoxPostDepartment.SelectedItem != null && comboBoxRecievingCity.SelectedItem != null && comboBox1RecievingPost.SelectedItem != null)
             {
@@ -105,8 +107,10 @@ namespace FreightTransportation
         
         private void buttonLogOut_Click(object sender, RoutedEventArgs e)
         {
+            // lg - bad name
             LoginWindow lg = new LoginWindow();
             CurrentCustomer.Logout();
+            // why this?
             this.Close();
             lg.ShowDialog();
         }

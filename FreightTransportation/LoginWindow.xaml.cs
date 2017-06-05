@@ -32,6 +32,7 @@ namespace FreightTransportation
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
+            // green code?
             //var customer = new Customer()
             //{
             //    FirstName = "Ivan",
